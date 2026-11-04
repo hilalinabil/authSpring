@@ -1,4 +1,4 @@
-# 🔐 authSpring - Spring Boot JWT Authentication & Authorization Service
+#  authSpring - Spring Boot JWT Authentication & Authorization Service
 
 [![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://www.oracle.com/java/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.6-brightgreen.svg)](https://spring.io/projects/spring-boot)
@@ -11,7 +11,7 @@
 
 ---
 
-## 📑 Table of Contents
+##  Table of Contents
 
 - [Key Features](#-key-features)
 - [Architecture & Workflow](#-architecture--workflow)
@@ -41,7 +41,7 @@
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 - **Stateless Token-Based Authentication**: Issues signed HMAC-SHA256 JWT tokens upon valid login credentials.
 - **Strong Password Hashing**: Leverages `BCryptPasswordEncoder` with salt to guarantee password security at rest.
@@ -53,7 +53,7 @@
 
 ---
 
-## 🏗️ Architecture & Workflow
+##  Architecture & Workflow
 
 ### High-Level Architecture
 
@@ -174,7 +174,7 @@ sequenceDiagram
 
 ---
 
-## 📁 Project Directory Structure
+##  Project Directory Structure
 
 ```
 authSpring/
@@ -222,7 +222,7 @@ authSpring/
 
 ---
 
-## 🛠️ Tech Stack & Dependencies
+##  Tech Stack & Dependencies
 
 | Component | Technology | Version | Purpose |
 | :--- | :--- | :--- | :--- |
@@ -238,7 +238,7 @@ authSpring/
 
 ---
 
-## ⚙️ Prerequisites
+##  Prerequisites
 
 Before running the application, make sure you have the following installed:
 
@@ -251,7 +251,7 @@ Before running the application, make sure you have the following installed:
 
 ---
 
-## 🔧 Configuration Guide
+##  Configuration Guide
 
 > [!IMPORTANT]
 > The active configuration file `src/main/resources/application.properties` is ignored by `.gitignore` to prevent sensitive credentials and secret keys from being leaked to version control. You **must** create this file before starting the application.
@@ -311,7 +311,7 @@ openssl rand -hex 32
 
 ---
 
-## 🗄️ Database Setup
+##  Database Setup
 
 ### 1. Using Local MySQL
 
@@ -337,7 +337,7 @@ docker run --name mysql-auth-container \
 
 ---
 
-## 🚀 Build and Run
+##  Build and Run
 
 ### Run with Maven Wrapper
 
@@ -375,15 +375,15 @@ Execute unit and integration tests:
 
 ---
 
-## 📡 API Documentation & Endpoints
+##  API Documentation & Endpoints
 
 Base URL: `http://localhost:8080`
 
 | HTTP Method | Endpoint | Description | Auth Required |
 | :--- | :--- | :--- | :--- |
-| `POST` | `/api/auth/register` | Registers a new user account | ❌ No |
-| `POST` | `/api/auth/login` | Authenticates user & issues JWT | ❌ No |
-| `GET` | `/actuator/health` | Application health status | ❌ No |
+| `POST` | `/api/auth/register` | Registers a new user account |  No |
+| `POST` | `/api/auth/login` | Authenticates user & issues JWT |  No |
+| `GET` | `/actuator/health` | Application health status |  No |
 
 ---
 
@@ -488,7 +488,7 @@ curl -X GET http://localhost:8080/api/some-protected-endpoint \
 
 ---
 
-## 🔒 Security Implementation Details
+##  Security Implementation Details
 
 1. **Password Encoding**:
    The `SecurityConfig` registers a `@Bean` for `PasswordEncoder` utilizing `BCryptPasswordEncoder`. BCrypt automatically creates a cryptographic salt and hashes passwords before they touch the database.
@@ -502,7 +502,7 @@ curl -X GET http://localhost:8080/api/some-protected-endpoint \
 
 ---
 
-## 💡 Analysis & Recommended Improvements
+##  Analysis & Recommended Improvements
 
 The current codebase establishes a clear authentication skeleton. The following enhancements are recommended to bring the project to enterprise production standards:
 
@@ -569,7 +569,7 @@ flowchart TD
 
 ---
 
-## ❓ Troubleshooting & FAQs
+##  Troubleshooting & FAQs
 
 <details>
 <summary><b>1. Error: <code>java.security.InvalidKeyException: The specified key byte array is 160 bits...</code></b></summary>
@@ -594,6 +594,6 @@ flowchart TD
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the terms of the MIT License. Feel free to use, modify, and distribute it for personal or commercial projects.
